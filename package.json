@@ -1,63 +1,27 @@
 {
-  "name": "dirold2.github.io",
-  "version": "0.2.4",
+  "name": "nextjs-github-pages",
+  "version": "0.1.0",
   "private": true,
-  "description": "A web application for gaming platform",
-  "keywords": [
-    "gaming",
-    "platform",
-    "nextjs"
-  ],
-  "author": "<i@dirold.ru>",
-  "license": "MIT",
-  "repository": "git+https://github.com/Dirold2/dirold2.github.io",
   "scripts": {
+    "dev": "next dev",
     "build": "next build",
-    "dev": "next dev --turbo",
-    "export": "next export",
-    "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "15.0.3",
-    "bootstrap-icons": "^1.11.3",
-    "clipboardy": "^4.0.0",
-    "cookies-next": "^5.0.2",
-    "dotenv": "^16.4.5",
-    "lucide-react": "^0.460.0",
-    "next": "15.0.3",
-    "next-intl": "^3.25.1",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-calendar": "^5.1.0",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "sharp": "^0.33.5",
-    "tslog": "^4.9.3",
-    "yup": "^1.4.0",
-    "zod": "^3.23.8"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^15.0.3"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.15.0",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.9.3",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
-    "eslint": "^9.15.0",
-    "eslint-config-next": "15.0.3",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.14.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:types-react@19.0.0-rc.1",
-      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
-    }
-  },
-  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "eslint": "^8",
+    "eslint-config-next": "^15.0.3"
+  }
 }

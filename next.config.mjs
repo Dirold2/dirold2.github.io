@@ -1,30 +1,28 @@
-import createNextIntlPlugin from 'next-intl/plugin';
-const withNextIntl = createNextIntlPlugin();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  reactStrictMode: true,
+  /**
+   * Enable static exports for the App Router.
+   *
+   * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
+   */
+  output: "export",
+
+  /**
+   * Set base path. This is usually the slug of your repository.
+   *
+   * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
+   */
+  basePath: "/nextjs-github-pages",
+
+  /**
+   * Disable server-based image optimization. Next.js does not support
+   * dynamic features with static exports.
+   *
+   * @see https://nextjs.org/docs/pages/api-reference/components/image#unoptimized
+   */
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'avatars.githubusercontent.com', pathname: '**' },
-      { protocol: 'https', hostname: '6dph3blg-3000.euw.devtunnels.ms', pathname: '**' },
-      { protocol: 'https', hostname: 'cdn.discordapp.com', pathname: '**' },
-      { protocol: 'https', hostname: 'placehold.co', pathname: '**' },
-      { protocol: 'https', hostname: 'reqres.in', pathname: '**' },
-      { protocol: 'https', hostname: 'ui-avatars.com', pathname: '**'}
-    ],
-    dangerouslyAllowSVG: true,
-    minimumCacheTTL: 86400,
-  },
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  webpack: (config) => config,
-  experimental: {
-    serverActions: {
-      allowedOrigins: [`https://dirold2.github.io/`]
-    }
+    unoptimized: true,
   },
 };
 
-// Экспорт без использования million
-export default withNextIntl(nextConfig);
+export default nextConfig;
