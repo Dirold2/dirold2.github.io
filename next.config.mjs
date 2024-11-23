@@ -1,5 +1,4 @@
 import createNextIntlPlugin from 'next-intl/plugin';
-
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
@@ -26,7 +25,5 @@ const nextConfig = {
   },
 };
 
-// Wrap withNextIntl in a function that ensures it returns a valid Next.js config object
-const wrappedConfig = () => withNextIntl(nextConfig);
-
-export default wrappedConfig;
+// Экспорт без использования million
+export default withNextIntl(nextConfig);
