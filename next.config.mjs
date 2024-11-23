@@ -20,7 +20,7 @@ const nextConfig = {
   webpack: (config) => config,
   experimental: {
     serverActions: {
-      allowedOrigins: [`${process.env.PUBLIC_HOSTNAMES}`]
+      allowedOrigins: [`https://dirold2.github.io/`]
     }
   },
 };
