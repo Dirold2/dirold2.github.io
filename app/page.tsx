@@ -25,12 +25,12 @@ export default function Home() {
             <ProjectCard
               title="Dashboard"
               description="Описание проекта с указанием технологий, задач и достигнутых результатов."
-              link="https://github.com/dashboard"
+              link="https://github.com/dirold2/dashboard"
             />
             <ProjectCard
               title="ragu2"
               description="Еще один интересный проект, демонстрирующий мои навыки в веб-разработке."
-              link="https://github.com/ragu2"
+              link="https://github.com/dirold2/ragu2"
             />
             {/* Add more ProjectCard components as needed */}
           </div>
