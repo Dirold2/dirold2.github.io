@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+
+:root {
+  --background: 255, 255, 255;
+  --background-back: 199, 199, 199;
+  --background-before: 220, 220, 220;
+  --background-after: 180, 180, 180;
+  --color: 50, 50, 60;
+  --colorHv: 220, 220, 220;
+
+  --width: 95%;
+  --border: 0.2em;
+  --border-radius: 0.6em;
+  --other-margin: 4rem 2rem 0px 2rem;
+  --other-padding: 1em;
+
+  --transition: 0.3s;
+
+  --GitHub: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 26, 26, 26;
+    --background-back: 51, 51, 51;
+    --background-before: 38, 38, 38;
+    --background-after: 102, 102, 102;
+    --color: 173, 173, 173;
+    --colorHv: 38, 38, 38;
+  }
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* selection */
+::selection {
+  background: rgb(var(--color)); /* Safari */
+  color: rgb(var(--colorHv));
+}
+
+::-moz-selection {
+  background: rgb(var(--color)); /* Firefox */
+  color: rgb(var(--colorHv));
+}
+
+html{
+  color-scheme: light dark;
+  position: relative;
+}
+
+html,
+body {
+  margin: 0;
+  transition: background var(--transition), color var(--transition), background-color var(--transition);
+
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgb(var(--background-before)) transparent;
+}
+
+body {
+  color: rgb(var(--color));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+    rgb(var(--background-start-rgb));
+
+  min-height: 100vh;
+  overflow-y: auto;
+  outline: none;
+}
+
+main {
+  /* margin: var(--other-margin); */
+  border-radius: var(--border-radius);
+
+  width: var(--width);
+}
+
+section {
+  margin: 20px 0;
+  padding: var(--other-padding);
+  background: rgb(var(--background));
+  border-radius: var(--border-radius);
+}
+
+hr {
+  margin: var(--border) 0;
+  width: 100%;
+  height: 1px;
+  border-radius: var(--border-radius);
+  background-color: rgb(var(--color));
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

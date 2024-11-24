@@ -1,6 +1,7 @@
-import { ArrowUpRight } from 'lucide-react'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
+import styles from "@/app/styles/card.module.css";
 
 interface ProjectCardProps {
   title: string
@@ -10,7 +11,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, link }: ProjectCardProps) {
   return (
-    <Card className="group transition-all hover:shadow-lg">
+    <Card className={`${styles.projectCard} group hover:shadow-lg`}>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
@@ -20,10 +21,10 @@ export function ProjectCard({ title, description, link }: ProjectCardProps) {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+          className="inline-flex items-center transition-colors"
         >
           Подробнее
-          <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <i className="bi bi-arrow-up-right ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </Link>
       </CardContent>
     </Card>

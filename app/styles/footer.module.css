@@ -1,0 +1,15 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--border-radius);
+    background: rgb(var(--background));
+
+    margin-bottom: 1em;
+
+    width: var(--width);
+
+    position: absolute;
+    bottom: 0;
+}

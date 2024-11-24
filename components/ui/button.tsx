@@ -2,13 +2,13 @@ import Link from 'next/link'
 
 import styles from "@/app/styles/button.module.css";
 
-interface ContactButtonProps {
+interface ButtonProps {
   href: string
   icon: string
   label: string
 }
 
-export function ContactButton({ href, icon, label }: ContactButtonProps) {
+export function Button({ href, icon, label }: ButtonProps) {
 
   return (
     <Link
@@ -22,4 +22,3 @@ export function ContactButton({ href, icon, label }: ContactButtonProps) {
     </Link>
   )
 }
-

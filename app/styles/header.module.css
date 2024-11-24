@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    padding: var(--other-padding);
+    border-radius: var(--border-radius);
+    background: rgb(var(--background));
+
+    margin-top: 1rem;
+
+    width: var(--width);
+}

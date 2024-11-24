@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 
+import styles from "@/app/styles/card.module.css";
+
 interface CardProps {
   children: ReactNode
   className?: string
@@ -7,9 +9,9 @@ interface CardProps {
 
 export function Card({ children, className = '' }: CardProps) {
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden ${className}`}>
+    <section className={`rounded-lg shadow-md overflow-hidden ${className} ${styles.card}`}>
       {children}
-    </div>
+    </section>
   )
 }
 
@@ -26,5 +28,5 @@ export function CardTitle({ children, className = '' }: CardProps) {
 }
 
 export function CardDescription({ children, className = '' }: CardProps) {
-  return <p className={`text-gray-600 dark:text-gray-300 ${className}`}>{children}</p>
+  return <p className={`${className}`}>{children}</p>
 }

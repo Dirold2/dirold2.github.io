@@ -1,0 +1,24 @@
+.button{
+    background: rgb(var(--background));
+    color: rgb(var(--color));
+    margin: var(--border);
+    padding: calc(var(--other-padding) / 2) var(--other-padding) ;
+    border-radius: var(--border-radius);
+
+    cursor: pointer;
+
+    border: var(--border) solid rgb(var(--colorHv));
+
+    transition: background var(--transition), color var(--transition), border var(--transition);
+}
+
+.button i{
+    margin: 0 var(--border);
+}
+
+.button:hover{
+    background: rgb(var(--background-after));
+    color: rgb(var(--colorHv));
+
+    border: var(--border) solid transparent;
+}
