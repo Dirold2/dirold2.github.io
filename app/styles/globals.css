@@ -88,6 +88,8 @@ main {
   /* margin: var(--other-margin); */
   border-radius: var(--border-radius);
 
+  margin-bottom: 4rem;
+
   width: var(--width);
 }
 
